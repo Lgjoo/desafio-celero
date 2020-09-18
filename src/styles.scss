@@ -1,3 +1,49 @@
-/* You can add global styles to this file, and also import other style files */
 @import './app/scss/reset.scss';
 
+$display: flex; 
+$wrap: wrap;
+$flexStart: flex-start;
+$center: center;
+$flexEnd: flex-end;
+
+html, body {
+    height: 100%;
+}
+
+.col {
+    display: $display;
+    flex-direction: column;
+    flex-wrap: $wrap;
+    flex: 1;
+}
+
+.row {
+    display: $display;
+    flex-direction: row;
+    flex-wrap: $wrap;
+    flex: 1;
+}
+
+.superior {
+    justify-content: $flexStart;
+}
+
+.centro-vertical {
+    justify-content: $center;
+}
+
+.inferior {
+    justify-content: $flexEnd;
+}
+
+.esquerda {
+    align-items: $flexStart;
+}
+
+.centro-horizontal {
+    align-items: $center;
+}
+
+.direita {
+    align-items: $flexEnd;
+}
