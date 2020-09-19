@@ -1,4 +1,7 @@
-<div class="col">
+<div class="col" [ngClass]="{'mostraTela': !jogoIniciado, 'escondeTela': jogoIniciado}">
+  <tela-inicial (iniciarJogoEvent)="iniciarJogo($event)"></tela-inicial>
+</div>
+<div class="col" [ngClass]="{'mostraTela': jogoIniciado, 'escondeTela': !jogoIniciado}">
   <div class="row">
     <div class="col superior esquerda">
       

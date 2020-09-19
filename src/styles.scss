@@ -1,5 +1,10 @@
 @import './app/scss/reset.scss';
 
+@font-face {
+    font-family: 'avengers';
+    src: url('./assets/fonts/AVENGEANCE\ HEROIC\ AVENGER\ AT.otf') format('truetype');
+}
+
 $display: flex; 
 $wrap: wrap;
 $flexStart: flex-start;
@@ -8,6 +13,7 @@ $flexEnd: flex-end;
 
 html, body {
     height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .col {

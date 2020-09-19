@@ -5,6 +5,12 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
+
 export class AppComponent {
-  title = 'desafio-celero';
+  public title: string = 'desafio-celero';
+  public jogoIniciado: boolean = false;
+
+  iniciarJogo(iniciar: boolean) {
+    this.jogoIniciado = iniciar;
+  }
 }
