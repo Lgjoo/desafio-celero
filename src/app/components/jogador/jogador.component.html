@@ -1,0 +1,10 @@
+<div class="col" [ngClass]="{'esquerda': orientacao == 'esquerda', 'direita': orientacao == 'direita'}" *ngIf="jogador">
+    <div class="jogadorThumbnailArea" [ngClass]="{'thumbEsquerda': orientacao == 'esquerda', 'thumbDireita': orientacao == 'direita'}">
+        <img class="jogadorThumbnail" [src]="jogador.thumbnail.path+'.'+jogador.thumbnail.extension">
+    </div>
+    <div class="jogadorNomeArea">
+        <p class="jogadorNome">
+            {{jogador.name}}
+        </p>
+    </div>
+</div>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { PersonagensService } from '../../services/personagens.service';
 import { Personagem } from '../../models/personagem';
 
@@ -15,6 +15,7 @@ export class SelecaoPersonagensComponent implements OnInit {
   public personagemSelecionado: Personagem = null;
   public mostraErro: boolean = false;
   public mostraErroSelecao: boolean = false;
+  @Output() setPersonagemJogadorEvent = new EventEmitter<object>();
   
   
   constructor(private personagensService: PersonagensService) { }
@@ -31,6 +32,8 @@ export class SelecaoPersonagensComponent implements OnInit {
       personagens => {
         if(personagens.data.results.length == 0) {
           this.mostraErro = true;
+        } else {
+          this.mostraErro = false;
         }
         this.personagens = personagens.data.results;
         this.carregandoLista = false;
@@ -45,6 +48,10 @@ export class SelecaoPersonagensComponent implements OnInit {
 
   escolherPersonagem(): void {
     if(this.personagemSelecionado) {
+      this.setPersonagemJogadorEvent.emit({
+        personagem: this.personagemSelecionado,
+        jogador: this.jogadorAtual
+      });
       this.personagens = [];
       if(this.jogadorAtual == 1) {
         this.personagemSelecionado = null;

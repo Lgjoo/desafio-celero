@@ -4,13 +4,13 @@
 <div class="col" [ngClass]="{'mostraTela': jogoIniciado, 'escondeTela': !jogoIniciado}">
   <div class="row">
     <div class="col superior esquerda">
-      
+      <jogador [jogador]="jogador1" [orientacao]="'esquerda'"></jogador>
     </div>
     <div class="col superior centro-horizontal">
       
     </div>
     <div class="col superior direita">
-      
+      <jogador [jogador]="jogador2" [orientacao]="'direita'"></jogador>
     </div>
   </div>
   <div class="row">
@@ -36,4 +36,4 @@
     </div>
   </div>
 </div>
-<selecao-personagens *ngIf="abreModal"></selecao-personagens>
+<selecao-personagens *ngIf="abreModal" (setPersonagemJogadorEvent)="setPersonagemJogador($event)"></selecao-personagens>

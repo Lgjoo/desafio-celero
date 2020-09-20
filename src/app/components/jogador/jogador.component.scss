@@ -1,0 +1,32 @@
+$width: 10em;
+$height: 10em;
+
+:host {
+    padding: 1em;
+}
+
+.jogadorThumbnailArea {
+    width: $width;
+    height: $height;
+}
+
+.thumbEsquerda {
+    transform: skew(5deg);
+}
+
+.thumbDireita {
+    transform: skew(-5deg);
+}
+
+.jogadorThumbnail {
+    width: $width;
+    height: $height;
+    object-fit: cover;
+}
+
+.jogadorNome {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin: .5em;
+    color: #FFF;
+}
