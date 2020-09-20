@@ -53,3 +53,27 @@ html, body {
 .direita {
     align-items: $flexEnd;
 }
+
+.botao {
+    border: 0;
+    color: #EEE;
+    border-radius: 5px;
+    box-shadow: #555 2px 2px 10px 1px;
+    transition: all .3s ease-in-out;
+}
+
+.botao:hover {
+    box-shadow: #888 2px 2px 15px 2px;
+    color: #FFF;
+    cursor: pointer;
+}
+
+.input {
+    background-color: #FBFCFE;
+    border: 1px solid #E6E8F0;
+    border-radius: 5px;
+    padding: 1em;
+    margin: .7em 0em;
+    color: #7B7E8C;
+    font-weight: 600;
+}
