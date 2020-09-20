@@ -14,6 +14,8 @@ export class AppComponent {
   public jogador1: Personagem = null;
   public jogador2: Personagem = null;
   public jogadorVez: number;
+  public pecaJogador1: number;
+  public pecaJogador2: number;
 
   iniciarJogo(iniciar: boolean) {
     this.jogoIniciado = iniciar;
@@ -32,6 +34,13 @@ export class AppComponent {
 
   sorteiaJogadorInicial(): void {
     this.jogadorVez = Math.round(Math.random() + 1);
+    if(this.jogadorVez == 1) {
+      this.pecaJogador1 = 1;
+      this.pecaJogador2 = 2;
+    } else {
+      this.pecaJogador1 = 2;
+      this.pecaJogador2 = 1;
+    }
   }
 
   proximoJogador(): void {
