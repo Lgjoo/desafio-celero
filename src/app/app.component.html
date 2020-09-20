@@ -15,13 +15,13 @@
   </div>
   <div class="row">
     <div class="col centro-vertical esquerda">
-      
+      <pecas *ngIf="pecaJogador1" [tipoPeca]="pecaJogador1"></pecas>
     </div>
     <div class="col centro-vertical centro-horizontal">
       
     </div>
     <div class="col centro-vertical direita">
-      
+      <pecas *ngIf="pecaJogador2" [tipoPeca]="pecaJogador2"></pecas>
     </div>
   </div>
   <div class="row">
