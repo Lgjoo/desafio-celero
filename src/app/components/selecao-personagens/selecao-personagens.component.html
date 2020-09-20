@@ -12,7 +12,7 @@
                     <i class="fas fa-spinner" *ngIf="carregandoLista" [ngClass]="{'girando': carregandoLista}"></i>
                 </a>
             </div>
-            <div class="listaPersonagens">
+            <div class="listaPersonagens" *ngIf="personagens.length > 0">
                 <ul class="row centro-vertical">
                     <a *ngFor="let personagem of personagens" (click)="selecionarPersonagem(personagem)">
                         <li class="col itemLista" [ngClass]="{'itemSelecionado': personagem == personagemSelecionado}">
@@ -25,8 +25,8 @@
                         </li>
                     </a>
                 </ul>
-                <p class="erroBusca" *ngIf="mostraErro">Não foi possível encontrar o personagem.</p>
             </div>
+            <p class="erroBusca" *ngIf="mostraErro">Não foi possível encontrar o personagem.</p>
         </div>
         <div class="modal-footer col">
             <button class="botao botaoSelecionar" (click)="escolherPersonagem()">Selecionar</button>
