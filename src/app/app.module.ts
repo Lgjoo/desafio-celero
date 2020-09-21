@@ -9,6 +9,7 @@ import { SelecaoPersonagensComponent } from './components/selecao-personagens/se
 import { JogadorComponent } from './components/jogador/jogador.component';
 import { PecasComponent } from './components/pecas/pecas.component';
 import { TabuleiroComponent } from './components/tabuleiro/tabuleiro.component';
+import { MostraVezComponent } from './components/mostra-vez/mostra-vez.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { TabuleiroComponent } from './components/tabuleiro/tabuleiro.component';
     SelecaoPersonagensComponent,
     JogadorComponent,
     PecasComponent,
-    TabuleiroComponent
+    TabuleiroComponent,
+    MostraVezComponent
   ],
   imports: [
     BrowserModule,

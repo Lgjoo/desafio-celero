@@ -1,10 +1,10 @@
 <div class="modal col centro-horizontal centro-vertical">
     <div class="modal-window">
-        <div class="modal-header col centro-horizontal">
+        <div class="modal-header col centro-horizontal alinha-texto-centro">
             <h3 class="modal-titulo">Escolha seu personagem</h3>
             <h4 class="modal-sub-titulo">Jogador {{jogadorAtual}}</h4>
         </div>
-        <div class="modal-body col">
+        <div class="modal-body col alinha-texto-centro">
             <div class="row centro-vertical">
                 <input type="text" class="input inputPersonagem" name="nomePersonagem" placeholder="Insira o nome do personagem" [(ngModel)]="nomePersonagem" />
                 <a class="botaoPesquisar" (click)="pesquisaPersonagens()">
@@ -28,7 +28,7 @@
             </div>
             <p class="erroBusca" *ngIf="mostraErro">Não foi possível encontrar o personagem.</p>
         </div>
-        <div class="modal-footer col">
+        <div class="modal-footer col alinha-texto-centro">
             <button class="botao botaoSelecionar" (click)="escolherPersonagem()">Selecionar</button>
             <p class="erroBusca" *ngIf="mostraErroSelecao">Selecione um personagem para prosseguir.</p>
         </div>
