@@ -10,6 +10,7 @@ import { JogadorComponent } from './components/jogador/jogador.component';
 import { PecasComponent } from './components/pecas/pecas.component';
 import { TabuleiroComponent } from './components/tabuleiro/tabuleiro.component';
 import { MostraVezComponent } from './components/mostra-vez/mostra-vez.component';
+import { PlacarComponent } from './components/placar/placar.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { MostraVezComponent } from './components/mostra-vez/mostra-vez.component
     JogadorComponent,
     PecasComponent,
     TabuleiroComponent,
-    MostraVezComponent
+    MostraVezComponent,
+    PlacarComponent
   ],
   imports: [
     BrowserModule,
