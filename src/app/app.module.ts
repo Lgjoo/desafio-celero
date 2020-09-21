@@ -8,6 +8,7 @@ import { TelaInicialComponent } from './components/tela-inicial/tela-inicial.com
 import { SelecaoPersonagensComponent } from './components/selecao-personagens/selecao-personagens.component';
 import { JogadorComponent } from './components/jogador/jogador.component';
 import { PecasComponent } from './components/pecas/pecas.component';
+import { TabuleiroComponent } from './components/tabuleiro/tabuleiro.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { PecasComponent } from './components/pecas/pecas.component';
     TelaInicialComponent,
     SelecaoPersonagensComponent,
     JogadorComponent,
-    PecasComponent
+    PecasComponent,
+    TabuleiroComponent
   ],
   imports: [
     BrowserModule,

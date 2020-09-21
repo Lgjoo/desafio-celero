@@ -18,7 +18,7 @@
       <pecas *ngIf="pecaJogador1" [tipoPeca]="pecaJogador1"></pecas>
     </div>
     <div class="col centro-vertical centro-horizontal">
-      
+      <tabuleiro [pecaVez]="pecaVez" (proximoJogadorEvent)="proximoJogador()" (terminoJogoEvent)="terminoJogo($event)"></tabuleiro>
     </div>
     <div class="col centro-vertical direita">
       <pecas *ngIf="pecaJogador2" [tipoPeca]="pecaJogador2"></pecas>
