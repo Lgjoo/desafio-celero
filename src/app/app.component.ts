@@ -20,6 +20,8 @@ export class AppComponent {
   public pecaVez: number;
   public qtePecaJogador1: number;
   public qtePecaJogador2: number;
+  public vitoriasJogador1: number;
+  public vitoriasJogador2: number;
 
   iniciarJogo(iniciar: boolean) {
     this.jogoIniciado = iniciar;
@@ -29,8 +31,10 @@ export class AppComponent {
   setPersonagemJogador(player: {personagem: Personagem, jogador: number}): void {
     if(player.jogador == 1) {
       this.jogador1 = player.personagem;
+      this.vitoriasJogador1 = 0;
     } else {
       this.jogador2 = player.personagem;
+      this.vitoriasJogador2 = 0;
       this.abreModal = false;
       this.sorteiaJogadorInicial();
     }
@@ -77,6 +81,11 @@ export class AppComponent {
     }
     if(vencedor) {
       this.jogadorVencedor = jogador;
+      if(jogador == this.jogador1) {
+        this.vitoriasJogador1 += 1;
+      } else {
+        this.vitoriasJogador2 += 1;
+      }
     } 
   }
 }
