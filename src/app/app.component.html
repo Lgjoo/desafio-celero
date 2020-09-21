@@ -15,13 +15,13 @@
   </div>
   <div class="row">
     <div class="col centro-vertical esquerda">
-      <pecas *ngIf="pecaJogador1" [tipoPeca]="pecaJogador1"></pecas>
+      <pecas *ngIf="pecaJogador1" [tipoPeca]="pecaJogador1" [qtePeca]="qtePecaJogador1"></pecas>
     </div>
     <div class="col centro-vertical centro-horizontal">
       <tabuleiro [pecaVez]="pecaVez" (proximoJogadorEvent)="proximoJogador()" (terminoJogoEvent)="terminoJogo($event)"></tabuleiro>
     </div>
     <div class="col centro-vertical direita">
-      <pecas *ngIf="pecaJogador2" [tipoPeca]="pecaJogador2"></pecas>
+      <pecas *ngIf="pecaJogador2" [tipoPeca]="pecaJogador2" [qtePeca]="qtePecaJogador2"></pecas>
     </div>
   </div>
   <div class="row">
