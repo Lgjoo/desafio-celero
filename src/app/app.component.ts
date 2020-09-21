@@ -14,8 +14,10 @@ export class AppComponent {
   public jogador1: Personagem = null;
   public jogador2: Personagem = null;
   public jogadorVez: number;
+  public jogadorVencedor: Personagem = null;
   public pecaJogador1: number;
   public pecaJogador2: number;
+  public pecaVez: number;
 
   iniciarJogo(iniciar: boolean) {
     this.jogoIniciado = iniciar;
@@ -35,11 +37,11 @@ export class AppComponent {
   sorteiaJogadorInicial(): void {
     this.jogadorVez = Math.round(Math.random() + 1);
     if(this.jogadorVez == 1) {
-      this.pecaJogador1 = 1;
+      this.pecaJogador1 = this.pecaVez = 1;
       this.pecaJogador2 = 2;
     } else {
       this.pecaJogador1 = 2;
-      this.pecaJogador2 = 1;
+      this.pecaJogador2 = this.pecaVez = 1;
     }
   }
 
@@ -49,5 +51,20 @@ export class AppComponent {
     } else {
       this.jogadorVez = 1;
     }
+    if(this.pecaVez == 1) {
+      this.pecaVez = 2;
+    } else {
+      this.pecaVez = 1;
+    }
+  }
+
+  terminoJogo(vencedor: boolean) {
+    if(vencedor) {
+      if(this.jogadorVez == 1) {
+        this.jogadorVencedor = this.jogador1;
+      } else {
+        this.jogadorVencedor = this.jogador2;
+      }
+    } 
   }
 }
