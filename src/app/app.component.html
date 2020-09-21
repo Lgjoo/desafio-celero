@@ -7,7 +7,7 @@
       <jogador [jogador]="jogador1" [orientacao]="'esquerda'"></jogador>
     </div>
     <div class="col superior centro-horizontal">
-      
+      <mostra-vez [jogador]="jogadorVez == 1 ? jogador1 : jogador2"></mostra-vez>
     </div>
     <div class="col superior direita">
       <jogador [jogador]="jogador2" [orientacao]="'direita'"></jogador>
