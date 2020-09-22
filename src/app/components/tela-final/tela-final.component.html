@@ -1,0 +1,25 @@
+<div class="modal col centro-horizontal centro-vertical">
+    <div class="modal-window">
+        <div class="modal-header col centro-horizontal alinha-texto-centro">
+            <div *ngIf="jogadorVencedor">
+                <h3 class="modal-titulo">{{jogadorVencedor.name}}</h3>
+                <h4 class="modal-sub-titulo">Ganhou este duelo</h4>
+            </div>
+            <div *ngIf="!jogadorVencedor">
+                <h3 class="modal-titulo">Deu velha</h3>
+                <h4 class="modal-sub-titulo">Ninguém ganhou este duelo</h4>
+            </div>
+        </div>
+        <div class="modal-body col alinha-texto-centro">
+            <p class="textFinal">Outra partida?</p>
+        </div>
+        <div class="modal-footer row">
+            <div class="col">
+                <button class="botao botaoTrocar" (click)="trocarPersonagens()">Trocar personagens</button>
+            </div>
+            <div class="col">
+                <button class="botao botaoReiniciar" (click)="reiniciarPartida()">Jogar novamente</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -18,7 +18,7 @@
       <pecas *ngIf="pecaJogador1" [tipoPeca]="pecaJogador1" [qtePeca]="qtePecaJogador1"></pecas>
     </div>
     <div class="col centro-vertical centro-horizontal">
-      <tabuleiro [pecaVez]="pecaVez" (proximoJogadorEvent)="proximoJogador()" (terminoJogoEvent)="terminoJogo($event)"></tabuleiro>
+      <tabuleiro *ngIf="pecaJogador1 && pecaJogador2" [pecaVez]="pecaVez" (proximoJogadorEvent)="proximoJogador()" (terminoJogoEvent)="terminoJogo($event)"></tabuleiro>
     </div>
     <div class="col centro-vertical direita">
       <pecas *ngIf="pecaJogador2" [tipoPeca]="pecaJogador2" [qtePeca]="qtePecaJogador2"></pecas>
@@ -37,3 +37,4 @@
   </div>
 </div>
 <selecao-personagens *ngIf="abreModal" (setPersonagemJogadorEvent)="setPersonagemJogador($event)"></selecao-personagens>
+<tela-final *ngIf="mostraTelaFinal" [jogadorVencedor]="jogadorVencedor" (trocarPersonagensEvent)="iniciarJogo(true)" (reiniciarPartidaEvent)="reiniciaPartida()" (limpaPartidaEvent)="limpaPartida()"></tela-final>

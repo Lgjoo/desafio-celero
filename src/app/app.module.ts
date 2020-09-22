@@ -11,6 +11,7 @@ import { PecasComponent } from './components/pecas/pecas.component';
 import { TabuleiroComponent } from './components/tabuleiro/tabuleiro.component';
 import { MostraVezComponent } from './components/mostra-vez/mostra-vez.component';
 import { PlacarComponent } from './components/placar/placar.component';
+import { TelaFinalComponent } from './components/tela-final/tela-final.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { PlacarComponent } from './components/placar/placar.component';
     PecasComponent,
     TabuleiroComponent,
     MostraVezComponent,
-    PlacarComponent
+    PlacarComponent,
+    TelaFinalComponent
   ],
   imports: [
     BrowserModule,

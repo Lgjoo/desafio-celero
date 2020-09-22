@@ -56,9 +56,7 @@ export class SelecaoPersonagensComponent implements OnInit {
       if(this.jogadorAtual == 1) {
         this.personagemSelecionado = null;
         this.jogadorAtual = 2;
-      } else {
-  
-      }
+      } 
     } else {
       this.mostraErroSelecao = true;
     }

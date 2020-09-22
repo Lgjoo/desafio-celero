@@ -20,21 +20,24 @@ export class AppComponent {
   public pecaVez: number;
   public qtePecaJogador1: number;
   public qtePecaJogador2: number;
-  public vitoriasJogador1: number;
-  public vitoriasJogador2: number;
+  public vitoriasJogador1: number = 0;
+  public vitoriasJogador2: number = 0;
+  public mostraTelaFinal: boolean = false;
 
   iniciarJogo(iniciar: boolean) {
     this.jogoIniciado = iniciar;
     this.abreModal = true;
+    this.jogador1 = null;
+    this.jogador2 = null;
+    this.mostraTelaFinal = false;
+    this.limpaPartida();
   }
 
   setPersonagemJogador(player: {personagem: Personagem, jogador: number}): void {
     if(player.jogador == 1) {
       this.jogador1 = player.personagem;
-      this.vitoriasJogador1 = 0;
     } else {
       this.jogador2 = player.personagem;
-      this.vitoriasJogador2 = 0;
       this.abreModal = false;
       this.sorteiaJogadorInicial();
     }
@@ -87,5 +90,17 @@ export class AppComponent {
         this.vitoriasJogador2 += 1;
       }
     } 
+    this.mostraTelaFinal = true;
+  }
+
+  limpaPartida(): void {
+    this.pecaJogador1 = null;
+    this.pecaJogador2 = null;
+    this.jogadorVencedor = null;
+  }
+
+  reiniciaPartida(): void {
+    this.mostraTelaFinal = false;
+    this.sorteiaJogadorInicial();
   }
 }

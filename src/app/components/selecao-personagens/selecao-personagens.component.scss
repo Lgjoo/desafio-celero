@@ -6,48 +6,6 @@ $branco: #FFF;
 $bold: 700;
 $semiBold: 600;
 
-.modal {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: #0007;
-    z-index: 9;
-    width: 100vw;
-    height: 100vh;
-}
-
-.modal-window {
-    background-color: $branco;
-    border-radius: 5px;
-    width: 70vw;
-    max-height: 80vh;
-    padding: 2em;
-    box-shadow: #555 0px 0px 5px 2px;
-}
-
-.modal-header, 
-.modal-body, 
-.modal-footer {
-    padding: 1em;
-}
-
-.modal-titulo {
-    font-size: 2em;
-    font-weight: $bold;
-    margin-bottom: 1em;
-}
-
-.modal-sub-titulo {
-    font-size: 1.4em;
-    font-weight: $semiBold;
-    margin-bottom: 1em;
-}
-
-.modal-body {
-    border-top: $borda;
-    border-bottom: $borda;
-}
-
 .inputPersonagem {
     width: 60%;
 }
