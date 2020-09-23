@@ -1,0 +1,36 @@
+<div class="modal col centro-horizontal centro-vertical">
+    <div class="modal-window">
+        <div class="modal-header col centro-horizontal alinha-texto-centro">
+            <h3 class="modal-titulo">Escolha seu Personagem</h3>
+            <h4 class="modal-sub-titulo">Jogador {{jogadorAtual}}</h4>
+        </div>
+        <div class="modal-body col alinha-texto-centro">
+            <div class="row centro-vertical">
+                <input type="text" class="input inputPersonagem" name="nomePersonagem" placeholder="Insira o nome do personagem" [(ngModel)]="nomePersonagem" />
+                <a class="botaoPesquisar" (click)="pesquisaPersonagens()">
+                    <i class="fas fa-search" *ngIf="!carregandoLista"></i>
+                    <i class="fas fa-spinner" *ngIf="carregandoLista" [ngClass]="{'girando': carregandoLista}"></i>
+                </a>
+            </div>
+            <div class="listaPersonagens" *ngIf="personagens.length > 0">
+                <ul class="row centro-vertical">
+                    <a *ngFor="let personagem of personagens" (click)="selecionarPersonagem(personagem)">
+                        <li class="col itemLista" [ngClass]="{'itemSelecionado': personagem == personagemSelecionado}">
+                            <div class="personagemThumbArea">
+                                <img class="personagemThumb" [src]="personagem.thumbnail.path+'.'+personagem.thumbnail.extension" />
+                            </div>
+                            <div class="personanegemNameArea">
+                                {{personagem.name}}
+                            </div>
+                        </li>
+                    </a>
+                </ul>
+            </div>
+            <p class="erroBusca" *ngIf="mostraErro">Nao foi possivel encontrar o personagem.</p>
+        </div>
+        <div class="modal-footer col alinha-texto-centro">
+            <button class="botao botaoSelecionar" (click)="escolherPersonagem()">Selecionar</button>
+            <p class="erroBusca" *ngIf="mostraErroSelecao">Selecione um personagem para prosseguir.</p>
+        </div>
+    </div>
+</div>

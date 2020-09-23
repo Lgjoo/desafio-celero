@@ -1,0 +1,46 @@
+<div class="col">
+  <div class="col" [ngClass]="{'mostraTela': !jogoIniciado, 'escondeTela': jogoIniciado}">
+    <tela-inicial (iniciarJogoEvent)="iniciarJogo($event)"></tela-inicial>
+  </div>
+  <div class="col" [ngClass]="{'mostraTela': jogoIniciado, 'escondeTela': !jogoIniciado}">
+    <div class="row">
+      <div class="col grid superior esquerda">
+        <jogador [jogador]="jogador1" [orientacao]="'esquerda'"></jogador>
+      </div>
+      <div class="col grid superior centro-horizontal">
+        <mostra-vez [jogador]="jogadorVez == 1 ? jogador1 : jogador2"></mostra-vez>
+      </div>
+      <div class="col grid superior direita">
+        <jogador [jogador]="jogador2" [orientacao]="'direita'"></jogador>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col grid centro-vertical esquerda">
+        <pecas *ngIf="criaJogo" [tipoPeca]="pecaJogador1" [qtePeca]="qtePecaJogador1"></pecas>
+      </div>
+      <div class="col grid centro-vertical centro-horizontal">
+        <tabuleiro *ngIf="criaJogo" [pecaVez]="pecaVez" (proximoJogadorEvent)="proximoJogador()" (terminoJogoEvent)="terminoJogo($event)"></tabuleiro>
+      </div>
+      <div class="col grid centro-vertical direita">
+        <pecas *ngIf="criaJogo" [tipoPeca]="pecaJogador2" [qtePeca]="qtePecaJogador2"></pecas>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col grid inferior esquerda">
+        
+      </div>
+      <div class="col grid inferior centro-horizontal">
+        <placar *ngIf="jogador1 && jogador2" [vitoriasJogador1]="vitoriasJogador1" [vitoriasJogador2]="vitoriasJogador2"></placar>
+      </div>
+      <div class="col grid inferior direita">
+        
+      </div>
+    </div>
+  </div>
+  <selecao-personagens *ngIf="abreModal" (setPersonagemJogadorEvent)="setPersonagemJogador($event)"></selecao-personagens>
+  <tela-final *ngIf="mostraTelaFinal" [jogadorVencedor]="jogadorVencedor" (trocarPersonagensEvent)="iniciarJogo(false)" (reiniciarPartidaEvent)="iniciarJogo(true)" (limpaPartidaEvent)="limpaPartida()"></tela-final>
+  
+  <div class="row creditos">
+    <p>Dados cedidos pela Marvel. © 2014 Marvel</p>
+  </div>
+</div>

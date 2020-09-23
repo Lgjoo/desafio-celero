@@ -1,0 +1,107 @@
+$borda: #888 1px solid;
+$transition: all .3s ease-in-out;
+$vermelhoEscuro: #AA0800;
+$vermelhoClaro: #FF0800;
+$branco: #FFF;
+$bold: 700;
+$semiBold: 600;
+
+.inputPersonagem {
+    width: 60%;
+}
+
+.botaoPesquisar {
+    border: $borda;
+    border-radius: 5px;
+    padding: .3em .6em;
+    background-color: $vermelhoEscuro;
+    color: $branco;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: .6em;
+    box-shadow: #555 2px 2px 10px 1px;
+}
+
+.botaoPesquisar:hover {
+    background-color: $vermelhoClaro;
+    box-shadow: #888 2px 2px 15px 2px;
+    cursor: pointer;
+}
+
+.girando {
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-name: spin;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.listaPersonagens {
+    overflow-y: scroll;
+    max-height: 40vh;
+}
+
+.itemLista {
+    padding: 0.5em;
+    margin: 0.5em;
+    border: $borda;
+    border-radius: 5px;
+    width: 15vw;
+    transition: $transition;
+}
+
+.itemLista:hover {
+    background-color: $vermelhoClaro;
+    color: $branco;
+    cursor: pointer;
+}
+
+.itemSelecionado {
+    background-color: $vermelhoEscuro;
+    color: $branco;
+    cursor: pointer;
+}
+
+.personagemThumb {
+    width: 10vw;
+    height: 10vw;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.personanegemNameArea {
+    margin-top: .5em;
+}
+
+.erroBusca {
+    margin: 1em;
+    color: $vermelhoClaro;
+    font-weight: $bold;
+}
+
+.botaoSelecionar {
+    background-color: $vermelhoEscuro;
+    padding: .8em 1em;
+    font-size: 1.2em;
+    font-weight: $semiBold;
+}
+
+.botaoSelecionar:hover {
+    background-color: $vermelhoClaro;
+}
+
+@media only screen and (max-width: 550px) {
+    .botaoSelecionar {
+        padding: .6em 1em;
+        font-size: 1em;
+    }
+}

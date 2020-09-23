@@ -1,27 +1,23 @@
 # DesafioCelero
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.5.
+Projeto desenvolvido com Angular CLI 10.0.5.
 
-## Development server
+O projeto tem por objetivo criar um jogo da velha com personagens do universo da MARVEL.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Todo o conteúdo visual aqui apresentado é de propriedade da MARVEL.
 
-## Code scaffolding
+## Configuração
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Para configurar este projeto, utilize o comando `npm install`.
 
-## Build
+Para rodar um servidor de desenvolvimento, utilize o comando `ng serve`.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Para compilar o projeto, utilize o comando `ng build`. 
 
-## Running unit tests
+Para compilar utilizando o ambiente de produção, utilizar o comando `ng build --prod`.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Sobre
 
-## Running end-to-end tests
+O projeto foi desenvolvido utilizando o Angular 10, sendo escrito em sua maioria em Typescript, sendo também utilizado SCSS para estilização dos componentes.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Foi utilizado a API da MARVEL(`https://gateway.marvel.com:443/v1/public/`) para obtenção de personagens para o jogo.

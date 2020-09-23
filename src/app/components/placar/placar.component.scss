@@ -1,0 +1,40 @@
+:host {
+    width: 100%;
+    margin-bottom: 2em;
+}
+
+.textPlacar {
+    font-size: 1.3em;
+    font-weight: 600;
+    color: #FFF;
+    margin-bottom: 1em;
+}
+
+.valorPlacar {
+    font-size: 5em;
+    font-weight: 800;
+    color: #FF0800;
+    text-shadow: #FF0800 0px 0px 10px;
+}
+
+@media only screen and (max-width: 550px) {
+    .textPlacar {
+        font-size: 1em;
+        margin-bottom: 0.4em;
+    }
+
+    .valorPlacar {
+        font-size: 3.5em;
+    }
+}
+
+@media only screen and (min-width: 551px) and (max-width: 900px) {
+    .textPlacar {
+        font-size: 1.2em;
+        margin-bottom: .7em;
+    }
+
+    .valorPlacar {
+        font-size: 4.5em;
+    }
+}
