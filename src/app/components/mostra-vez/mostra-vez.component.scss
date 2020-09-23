@@ -13,3 +13,23 @@
     font-weight: 700;
     font-size: 2.5em;
 }
+
+@media only screen and (max-width: 550px) {
+    .textoVez {
+        font-size: 1.2em;
+    }
+
+    .textoVezJogador {
+        font-size: 1.7em;
+    }
+}
+
+@media only screen and (min-width: 551px) and (max-width: 900px) {
+    .textoVez {
+        font-size: 1.4em;
+    }
+
+    .textoVezJogador {
+        font-size: 2.1em;
+    }
+}

@@ -1,5 +1,5 @@
-$width: 10em;
-$height: 10em;
+$width: 12vw;
+$height: 12vw;
 
 :host {
     padding: 1em;
@@ -29,4 +29,34 @@ $height: 10em;
     font-weight: 600;
     margin: .5em;
     color: #FFF;
+}
+
+@media only screen and (max-width: 550px) {
+    $width: 23vw;
+    $height: 23vw;
+
+    .jogadorThumbnailArea {
+        width: $width;
+        height: $height;
+    }
+    
+    .jogadorThumbnail {
+        width: $width;
+        height: $height;
+    }
+}
+
+@media only screen and (min-width: 551px) and (max-width: 900px) {
+    $width: 18vw;
+    $height: 18vw;
+
+    .jogadorThumbnailArea {
+        width: $width;
+        height: $height;
+    }
+    
+    .jogadorThumbnail {
+        width: $width;
+        height: $height;
+    }
 }
