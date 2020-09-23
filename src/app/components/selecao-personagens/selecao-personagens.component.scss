@@ -1,7 +1,7 @@
 $borda: #888 1px solid;
 $transition: all .3s ease-in-out;
-$verdeEscuro: #088800;
-$verdeClaro: #08AA00;
+$vermelhoEscuro: #AA0800;
+$vermelhoClaro: #FF0800;
 $branco: #FFF;
 $bold: 700;
 $semiBold: 600;
@@ -14,8 +14,7 @@ $semiBold: 600;
     border: $borda;
     border-radius: 5px;
     padding: .3em .6em;
-    transition: $transition;
-    background-color: $verdeEscuro;
+    background-color: $vermelhoEscuro;
     color: $branco;
     display: flex;
     justify-content: center;
@@ -25,7 +24,7 @@ $semiBold: 600;
 }
 
 .botaoPesquisar:hover {
-    background-color: $verdeClaro;
+    background-color: $vermelhoClaro;
     box-shadow: #888 2px 2px 15px 2px;
     cursor: pointer;
 }
@@ -61,20 +60,20 @@ $semiBold: 600;
 }
 
 .itemLista:hover {
-    background-color: #FF0800;
+    background-color: $vermelhoClaro;
     color: $branco;
     cursor: pointer;
 }
 
 .itemSelecionado {
-    background-color: #AA0800;
+    background-color: $vermelhoEscuro;
     color: $branco;
     cursor: pointer;
 }
 
 .personagemThumb {
-    width: 5em;
-    height: 5em;
+    width: 10vw;
+    height: 10vw;
     object-fit: cover;
     border-radius: 50%;
 }
@@ -85,17 +84,24 @@ $semiBold: 600;
 
 .erroBusca {
     margin: 1em;
-    color: #FF0000;
+    color: $vermelhoClaro;
     font-weight: $bold;
 }
 
 .botaoSelecionar {
-    background-color: $verdeEscuro;
+    background-color: $vermelhoEscuro;
     padding: .8em 1em;
     font-size: 1.2em;
     font-weight: $semiBold;
 }
 
 .botaoSelecionar:hover {
-    background-color: $verdeClaro;
+    background-color: $vermelhoClaro;
+}
+
+@media only screen and (max-width: 550px) {
+    .botaoSelecionar {
+        padding: .6em 1em;
+        font-size: 1em;
+    }
 }

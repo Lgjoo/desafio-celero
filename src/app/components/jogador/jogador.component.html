@@ -2,7 +2,7 @@
     <div class="jogadorThumbnailArea" [ngClass]="{'thumbEsquerda': orientacao == 'esquerda', 'thumbDireita': orientacao == 'direita'}">
         <img class="jogadorThumbnail" [src]="jogador.thumbnail.path+'.'+jogador.thumbnail.extension">
     </div>
-    <div class="jogadorNomeArea">
+    <div class="jogadorNomeArea" [ngClass]="{'alinha-texto-esquerda': orientacao == 'esquerda', 'alinha-texto-direita': orientacao == 'direita'}">
         <p class="jogadorNome">
             {{jogador.name}}
         </p>

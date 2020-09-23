@@ -9,8 +9,10 @@
 }
 
 .divisor-vertical {
-    border: 6px #AA0800 solid;
+    background-color: #FF0800;
+    box-shadow: #FF0800 0px 0px 10px;
     height: 100%;
+    width: 12px;
 }
 
 .bordaFinal-superior {
@@ -22,7 +24,9 @@
 }
 
 .divisor-horizontal {
-    border: 6px #AA0800 solid;
+    background-color: #FF0800;
+    box-shadow: #FF0800 0px 0px 10px;
     width: 100%;
+    height: 12px;
     border-radius: 10px;
 }

@@ -1,13 +1,43 @@
 .textFinal {
-    font-size: 1.1em;
+    font-size: 1.3em;
     font-weight: 600;
 }
 
 .botaoTrocar,
 .botaoReiniciar {
     margin: 0em 2em;
-    background-color: #0A0;
+    background-color: #AA0800;
     padding: 1em;
     font-size: 1.2em;
     font-weight: 600;
+}
+
+.botaoTrocar:hover,
+.botaoReiniciar:hover {
+    background-color: #FF0800;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 550px) {
+    .textFinal {
+        font-size: 1em;
+    }
+
+    .botaoTrocar,
+    .botaoReiniciar {
+        margin: .5em 2em;
+        padding: .5em;
+        font-size: 1em;
+    }
+}
+
+@media only screen and (min-width: 551px) and (max-width: 900px) {
+    .textFinal {
+        font-size: 1.2em;
+    }
+
+    .botaoTrocar,
+    .botaoReiniciar {
+        font-size: 1em;
+    }
 }

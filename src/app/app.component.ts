@@ -23,14 +23,20 @@ export class AppComponent {
   public vitoriasJogador1: number = 0;
   public vitoriasJogador2: number = 0;
   public mostraTelaFinal: boolean = false;
+  public criaJogo: boolean = false;
 
-  iniciarJogo(iniciar: boolean) {
-    this.jogoIniciado = iniciar;
-    this.abreModal = true;
-    this.jogador1 = null;
-    this.jogador2 = null;
+  iniciarJogo(reiniciar: boolean) {
+    this.criaJogo = false;
+    this.jogoIniciado = true;
     this.mostraTelaFinal = false;
     this.limpaPartida();
+    if(!reiniciar) {
+      this.abreModal = true;
+      this.jogador1 = null;
+      this.jogador2 = null;
+    } else {
+      this.sorteiaJogadorInicial();
+    }
   }
 
   setPersonagemJogador(player: {personagem: Personagem, jogador: number}): void {
@@ -56,6 +62,9 @@ export class AppComponent {
       this.pecaJogador2 = this.pecaVez = 1;
       this.qtePecaJogador2 = 5;
     }
+    setTimeout(() => {
+      this.criaJogo = true;
+    }, 30);
   }
 
   proximoJogador(): void {
@@ -96,11 +105,8 @@ export class AppComponent {
   limpaPartida(): void {
     this.pecaJogador1 = null;
     this.pecaJogador2 = null;
+    this.qtePecaJogador1 = null;
+    this.qtePecaJogador2 = null;
     this.jogadorVencedor = null;
-  }
-
-  reiniciaPartida(): void {
-    this.mostraTelaFinal = false;
-    this.sorteiaJogadorInicial();
   }
 }

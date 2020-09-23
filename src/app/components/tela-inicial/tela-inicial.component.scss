@@ -3,6 +3,11 @@
     flex: 1;
 }
 
+.logo {
+    max-width: 50vw;
+    width: 100%;
+}
+
 .nomeJogo {
     font-family: 'avengers', Arial, Helvetica, sans-serif;
     font-size: 5em;
@@ -17,8 +22,38 @@
     padding: .8em 2em;
     font-size: 2em;
     font-weight: 700;
+    text-transform: uppercase;
 }
 
 .botaoIniciar:hover {
     background-color: #FF0800;
+}
+
+@media only screen and (max-width: 550px) {
+    .logo {
+        max-width: 90vw;
+    }
+
+    .nomeJogo {
+        font-size: 4em;
+        text-shadow: 4px 4px #FFF6;
+    }
+
+    .botaoIniciar {
+        font-size: 1.3em;
+    }
+}
+
+@media only screen and (min-width: 551px) and (max-width: 900px) {
+    .logo {
+        max-width: 65vw;
+    }
+
+    .nomeJogo {
+        font-size: 4.5em;
+    }
+
+    .botaoIniciar {
+        font-size: 1.6em;
+    }
 }
